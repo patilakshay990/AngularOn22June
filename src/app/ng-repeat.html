@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>ng-repeat</title>
+</head>
+
+<body ng-app="app" ng-controller="demoController">
+    <div>
+        <ul>
+            <li *ngFor="let topic of topics">
+                {{topic.name}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var myApp = angular.module('', []).controller('demoController',
+        function($scope) {
+
+            $scope.topics = [{
+                    name: "Java Stream API"
+                }, {
+                    name: "Spring Autowiring"
+                }
+
+            ];
+
+        }
+    );
+</script>
+
+
+</html>
