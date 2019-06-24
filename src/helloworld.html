@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>My First AngularJs Code</title>
+</head>
+<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+<body ng-app="app">
+    <div>
+        <h1 ng-controller="HelloWorldController">{{message}}</h1>
+    </div>
+
+</body>
+<script>
+  var app = angular.module('', []);
+  app.controller('HelloWorldController',
+    function ($scope) {
+      $scope.message = "Hello World";
+    }
+  );
+
+</script>
+</html>
